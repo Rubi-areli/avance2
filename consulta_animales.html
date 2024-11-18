@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Animales</title>
+</head>
+<body>
+    <h1>Animales Registrados</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Estado de Salud</th>
+            <th>Estado de Disponibilidad</th>
+        </tr>
+        {% for animal in animales %}
+        <tr>
+            <td>{{ animal.id_animal }}</td>
+            <td>{{ animal.nombre }}</td>
+            <td>{{ animal.especie }}</td>
+            <td>{{ animal.raza }}</td>
+            <td>{{ animal.edad }}</td>
+            <td>{{ animal.sexo }}</td>
+            <td>{{ animal.estado_salud }}</td>
+            <td>{{ animal.estado_disponibilidad }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
